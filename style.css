@@ -1,0 +1,45 @@
+/* ===== My custom touches ===== */
+
+/* Title: bigger, with an accent underline */
+h1 {
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  display: inline-block;
+  border-bottom: 4px solid var(--accent);
+  padding-bottom: 4px;
+}
+
+/* Cards: soft shadow, and they lift slightly on hover */
+section, details {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+section:hover, details:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .14);
+}
+
+/* Section headings get a small accent bar */
+h2 {
+  border-left: 5px solid var(--accent);
+  padding-left: 10px;
+}
+
+/* Drop zone: grows a little when you hover over it */
+.drop { transition: transform .2s ease, background-color .2s ease; }
+.drop:hover { transform: scale(1.02); }
+
+/* Network: smoother motion on circles and lines */
+.node circle { transition: transform .2s ease; transform-box: fill-box; transform-origin: center; }
+.node:hover circle { transform: scale(1.15); }
+.edge { transition: stroke-opacity .2s ease; }
+.node { transition: opacity .2s ease; }
+
+/* Reading list: highlight a row when hovered */
+#items li { transition: background .15s ease; padding-left: 8px; padding-right: 8px; border-radius: 6px; }
+#items li:hover { background: var(--accent-soft); }
+
+/* Buttons and tag chips */
+.btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.chip { transition: background .15s ease, color .15s ease; }
+.chip:hover { background: var(--accent-soft); }
